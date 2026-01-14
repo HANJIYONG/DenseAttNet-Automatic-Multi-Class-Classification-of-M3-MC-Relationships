@@ -29,8 +29,8 @@ def train(h_params):
     train_df = pd.read_csv('metadata_train.csv')
     val_df = pd.read_csv('metadata_val.csv')
     
-    train_dataset = ClassificationDataset(train_df)
-    val_dataset = ClassificationDataset(val_df)
+    train_dataset = SegmentationDataset(train_df)
+    val_dataset = SegmentationDataset(val_df)
     train_loader = DataLoader(train_dataset, batch_size=h_params.batch_size, shuffle=True)
     val_loader = DataLoader(val_dataset, batch_size=h_params.batch_size, shuffle=False)
 
