@@ -1,7 +1,7 @@
 # DenseAttNet: Automatic Multi-Class Classification of M3-MC Relationships
 
 This repository contains the official implementation of the paper:  
-**"Automatic Multi-Class Classification of 3D Relationships between the Mandibular Third Molar and Canal on CBCT Using a Geometry-Aware Network"** (Published in *Dentomaxillofacial Radiology*).
+**"Automatic Multi-Class Classification of 3D Relationships between the Mandibular Third Molar and Canal on CBCT Using a Geometry-Aware Network"**.
 
 ## Overview
 This study proposes **DenseAttNet**, a geometry-aware 3D deep learning framework designed to classify the spatial relationship between the Mandibular Third Molar (M3) and the Mandibular Canal (MC) into five categories.
