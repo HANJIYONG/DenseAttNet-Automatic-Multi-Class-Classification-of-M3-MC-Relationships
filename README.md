@@ -12,3 +12,6 @@ This study proposes **DenseAttNet**, a geometry-aware 3D deep learning framework
 - **Clinical Transparency**: Developed and reported following **CLAIM** and **TRIPOD-AI** guidelines.
 
 ---
+
+## Model Architecture
+Our model utilizes a modified 3D DenseNet backbone with integrated attention gates. For more details on the architecture (growth rate, layers, etc.), please refer to Table S1 in the Supplementary Materials of the paper.
