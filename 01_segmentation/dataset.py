@@ -6,7 +6,7 @@ from torch.utils.data import DataLoader,Dataset
 import monai
 import monai.transforms as mT
 
-class CustomDataset(Dataset):
+class SegmentationDataset(Dataset):
     def __init__(self,meta_df, resize=[256,128,128]):
         self.meta_df = meta_df
         self.anatomy = [0,1,2] # 0 = background, 1= canal, 2 = molar
