@@ -14,7 +14,6 @@ class SegmentationDataset(Dataset):
         self.ct_resizer = mT.Resize(self.resize)
         self.mask_resizer = mT.Resize(self.resize,mode='nearest')
         self.mode =mode
-        self.cache={}
         
     def __len__(self):
         return len(self.meta_df)
