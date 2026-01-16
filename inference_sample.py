@@ -14,12 +14,11 @@ from utils.roi_crop import signed_distance_map, find_min_distance_points_kdtree
 
 
 def preprocess_for_seg(image):
-    """Segmentation 모델을 위한 전처리 (Intensity Clipping & Resizing)"""
     img = image.copy()
     img[img > 3071] = 3071
     img /= 3071.
-    resizer = mT.Resize([128, 256, 128]) # 모델 학습 시 설정된 해상도
-    return resizer(img[None]) # [1, D, H, W]
+    resizer = mT.Resize([128, 256, 128]) 
+    return resizer(img[None])
 
 def main(args):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -49,6 +48,10 @@ def main(args):
     full_dicom = nib.load(args.input_path).get_fdata().transpose(2,1,0)[::-1]
     d,h,w = full_dicom.shape
     
+    # NOTE: The script attempts to parse the tooth number (#38 or #48) from the directory name.
+    # In clinical scenarios where the target tooth is not pre-specified in the metadata, 
+    # the full CBCT can be split into left and right hemispheres, and the inference 
+    # process should be executed twice (once for each side) to evaluate both M3-MC regions.
     sample_tnum = args.input_path.split("_")[-1].split(".")[0]
     if sample_tnum =='48':
         half_dcm = full_dicom[:,:,:int(w/2)]
