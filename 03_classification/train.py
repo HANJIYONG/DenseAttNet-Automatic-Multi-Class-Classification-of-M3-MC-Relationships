@@ -132,8 +132,6 @@ if __name__ == "__main__":
   h_params.lr_schedule_patience=20 #ReduceOnPlateau
   h_params.earlystop_patience=40 #early stop patience
   
-  h_params.size=[64,64,64]
-  
   h_params.model_name = "model.pth"
   h_params.model_save_base = os.path.join(os.getcwd(),"train_log")
   now = time.localtime(time.time())
