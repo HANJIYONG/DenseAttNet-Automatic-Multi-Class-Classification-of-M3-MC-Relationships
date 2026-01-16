@@ -22,6 +22,9 @@ This repository contains the official implementation of the paper:
 │   └── meta_df.csv             # Metadata containing paths and labels
 ├── utils/
 │   └── roi_crop.py             # Automated ROI extraction based on centroids
+├── pretrained_weights/
+│   ├── mAttUNet_statedict.pth     # Pretrained segmentation weight
+│   └── DenseAttNet_statedict.pth  # Pretrained classification weight
 ├── inference_sample.py            # End-to-end inference script (Seg -> ROI -> Class)
 └── README.md
 ```
