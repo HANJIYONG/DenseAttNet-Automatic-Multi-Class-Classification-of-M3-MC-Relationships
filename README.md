@@ -5,16 +5,21 @@ This repository contains the official implementation of the paper:
 
 ## Directory Structure
 ```
-├── data/
-│   ├── samples/                # 25 subset samples from Tooth Fairy dataset
-│   └── meta_df.csv             # Metadata containing paths and labels
-├── Segmentation/
-│   ├── dataset.py              # Data loader for CBCT segmentation
-│   └── train.py                # Training script for segmentation
 ├── Classification/
+│   ├── modules
+│   │   ├──earlystop.py         # Earlystop
 │   ├── dataset.py              # Data loader for DenseAttNet (SDM included)
 │   ├── model.py                # DenseAttNet architecture (Ours)
 │   └── train.py                # Training script for classification
+├── Segmentation/
+│   ├── modules
+│   │   ├──earlystop.py         # Earlystop
+│   │   ├──loss.py              # Loss function
+│   ├── dataset.py              # Data loader for CBCT segmentation
+│   └── train.py                # Training script for segmentation
+├── data/
+│   ├── samples/                # 25 subset samples from Tooth Fairy dataset
+│   └── meta_df.csv             # Metadata containing paths and labels
 ├── utils/
 │   └── roi_crop.py             # Automated ROI extraction based on centroids
 ├── inference_sample.py            # End-to-end inference script (Seg -> ROI -> Class)
