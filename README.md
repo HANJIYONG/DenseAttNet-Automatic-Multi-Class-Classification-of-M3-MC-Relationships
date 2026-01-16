@@ -37,7 +37,7 @@ Due to institutional data privacy policies and intellectual property protection,
 
 ## Dataset
 
-We provide 25 sample cases derived from the public Tooth Fairy dataset to demonstrate the code's functionality.
+- We provide 25 sample cases derived from the public Tooth Fairy dataset to demonstrate the code's functionality.
 ---
 
 ## License & Usage
